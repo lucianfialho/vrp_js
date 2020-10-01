@@ -23,8 +23,8 @@ const Character = new mongoose.Schema({
         type: Number,
         default: 21,
     },
-    user :{
-        type:mongoose.Schema.Types.ObjectId,
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
         ref:'User'
     }
 })

@@ -32,6 +32,12 @@ const User = new mongoose.Schema({
         type: Number,
         default: 1,
     },
+    character: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Character'
+        }
+    ]
 })
 
 module.exports = mongoose.model('User', User)
