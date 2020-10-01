@@ -18,7 +18,7 @@ const getsteamIdentifier = () => {
     return steamIdentifier
 }
 
-(async ()=>{
+( ()=>{
     on('playerConnecting', async(name, setKickReason, deferrals) => {
         deferrals.defer()
         
