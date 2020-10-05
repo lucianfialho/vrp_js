@@ -32,7 +32,7 @@ const User = new mongoose.Schema({
         type: Number,
         default: 1,
     },
-    character: [
+    characters: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Character'
