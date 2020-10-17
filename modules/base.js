@@ -18,11 +18,13 @@
             let source = global.source
             const user = await getUser();
             const characterPosition = await getCharacterPosition(user.characters[0]._id)
+            
             const position = {
                 x: characterPosition.x,
                 y: characterPosition.y,
                 z: characterPosition.z
             }
+            
             global.emitNet("cliOnClientGameTypeStart", source, position);
         }
     )

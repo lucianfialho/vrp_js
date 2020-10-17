@@ -1,4 +1,5 @@
 const CharacterModel = require('./database/model/Character');
+const PositionModel = require('./database/model/Position');
 
 const _sym = '123467890'
 const registrationNumberLength = 11
@@ -51,11 +52,18 @@ const generateRandomNumbers = (length) => {
         })
 
         await Character.save()
-        
+
         userBySteamIdentifier.characters.push(Character)
 
         await userBySteamIdentifier.save()
 
+        if(Character.firstSpawn) {
+            const Position = PositionModel.create({
+                character: Character._id
+            })
+
+            await Position.save()
+        }
     })
 })()
 

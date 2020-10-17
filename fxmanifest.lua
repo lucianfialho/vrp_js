@@ -10,13 +10,16 @@ dependency 'yarn'
 
 -- What to run
 server_scripts {
-    'database/connect.js',
+	'database/connect.js',
 	'base.js',
+	'modules/base.js',
 	'modules/identity.js',
+	'modules/player_state.js',
 }
 
 client_scripts {
 	"wait.js",
+	"client/base.js",
 	"client/player_state.js",
 }
 
