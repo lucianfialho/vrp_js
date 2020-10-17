@@ -23,10 +23,14 @@ const Character = new mongoose.Schema({
         type: Number,
         default: 21,
     },
+    firstSpawn: {
+        type: Boolean,
+        default: true,
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref:'User'
-    }
+    },
 })
 
 module.exports = mongoose.model('Character', Character)
